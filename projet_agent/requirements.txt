@@ -1,0 +1,13 @@
+langchain==0.3.25
+langchain-openai==0.2.14
+langchain-community==0.3.24
+langchain-experimental==0.3.4
+langchain-core
+python-dotenv
+openai
+tavily-python
+yfinance
+numpy
+fastapi
+uvicorn
+streamlit
