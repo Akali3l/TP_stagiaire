@@ -51,3 +51,33 @@ streamlit run app.py
 ```bash
 uvicorn api:app --reload
 ```
+
+
+## Tester le projet
+
+### Terminal (python main.py)
+### Exemple de commande :
+
+>> Donne-moi les infos du client C001
+>> Liste tous les clients
+>> Quel est le cours de AAPL ?
+>> Calcule mon portefeuille : AAPL:10|GOOGL:5|MSFT:3
+>> Quelles sont les dernières actualités d'Apple ?
+>> Calcule la moyenne de ces valeurs : 12, 45, 7, 89, 34, 56
+>> Donne-moi les infos du client C001
+>> Quel produit lui recommandes-tu ?
+>> Calcule le prix TTC et dis-moi si elle peut se le permettre
+
+### Ouvrir un deuxieme terminal
+
+### API REST (uvicorn api:app --reload)
+```bash
+curl http://localhost:8000/
+
+curl -X POST http://localhost:8000/api/agent/query \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Donne-moi les infos du client C001"}'
+```
+
+### Interface Streamlit (streamlit run app.py)
+Ouvre http://localhost:8501 dans ton navigateur et tape une question dans le champ en bas de page.
